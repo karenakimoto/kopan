@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        name: お名前
+      recipe:
+        image: 画像
+        name: トースト名
+        bread: 食パンの種類
+        breadtype_id: 枚切り
+        material: 材料
+        recipe: アレンジレシピ
+
