@@ -1,0 +1,117 @@
+body{
+  font-family: 'TsukuARdGothic-Regular',serif;
+}
+
+h1{
+  text-align: center;
+  color: lightpink;
+  text-shadow:2px 2px 3px chocolate;
+  position: relative;
+  line-height: 1.4;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+}
+
+.arengi-recipe{
+  text-align: center;
+  color: darksalmon;
+  font-size: 20px;
+  text-shadow:2px 1px 2px white;
+  position: relative;
+  margin: 47px 0;
+  padding: 3px;
+}
+
+.arengi-recipe:before {
+  content: "";
+  position: absolute;
+  background: #ffd69d;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+
+.toast{
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+.irasuto-btn{
+  display: block;
+  position: fixed;
+  right: 65px;
+  bottom: 10PX;
+}
+
+.irasuto-link{
+  text-decoration: none;
+}
+
+.irasuto{
+  width: 150px;
+  height: 150px;
+}
+
+.toukou_btn{
+  color: white;
+  position: relative;
+  top: 100px;
+  bottom: 50px;
+  text-shadow:2px 2px 2px darkred;
+  text-align: center;
+}
+
+.recipe-img{
+  width: 150px;
+  height: 150px;
+}
+
+.recipe-all{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recipe-find{
+  display: flex;
+}
+
+.recipe-find-all{
+  list-style: none;
+}
+
+.recipe-find-all li{
+  text-decoration: none;
+}
+
+.recipe-find-name{
+  background-color: darksalmon;
+  border-radius: 15px 15px 15px 15px;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.recipe-find-user-name{
+  list-style: circle;
+}
+
+.recipe-find-bread{
+  list-style: circle;
+}
+
+.recipe-tittle{
+  color: darksalmon;
+  text-align: center;
+  padding: 0.25em;
+  border-top: solid 2px darksalmon;
+  border-bottom: solid 2px darksalmon;
+  background: -webkit-repeating-linear-gradient(-45deg, #FFF0F5, #FFF0F5 3px,#FFFAFA 3px, #FFFAFA 7px);
+  background: repeating-linear-gradient(-45deg, #FFF0F5, #FFF0F5 3px,#FFFAFA 3px, #FFFAFA 7px);
+}

@@ -1,0 +1,88 @@
+.toast-title{
+  color: lightpink;
+  text-align: center;
+  text-shadow: 2px 2px 2px chocolate;
+}
+
+.toast-post{
+  color: darksalmon;
+  font-size: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+.indispensable{
+  background-color: darksalmon;
+  color: aliceblue;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 15px;
+  margin: 5px;
+  padding: 3px;
+}
+
+.post-img{
+  margin: 10px;
+}
+
+.toast-name{
+  margin: 10px;
+}
+
+.toast-type{
+  margin: 10px;
+}
+
+.toast-num{
+  margin: 10px;
+}
+
+.toast-material{
+  margin: 10px;
+}
+
+.toast-recipe{
+  margin: 10px;
+}
+
+.toast-calorie{
+  margin: 20px;
+}
+
+.sell-btn{
+  background: palevioletred;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 800ms ease all;
+  font-size: 17px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.sell-btn:hover{
+  background: #fff;
+  color: palevioletred;
+}
+
+.sell-btn:before,sell-btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: palevioletred;
+  transition:400ms ease all;
+}
+
+.sell-btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+
+.sell-btn:hover:before,.sell-btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}

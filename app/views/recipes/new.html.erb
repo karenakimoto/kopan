@@ -1,0 +1,43 @@
+
+<h2 class="toast-title">🍞 トーストレシピを入力 🍞</h2>
+<%= form_with model:@recipe, local: true do |f| %>
+<%= render 'shared/error', model: f.object %>
+<div class=toast-post>
+  <div class=post-img>
+    投稿画像
+    <span class="indispensable">必須</span>
+    <%= f.file_field :image, id:"recipe-image" %>
+  </div>
+  <div class="toast-name">
+  トースト名
+  <span class="indispensable">必須</span>
+  <%= f.text_area :name, placeholder:"トースト名(必須 40文字まで)", maxlength:"40" %><br>
+  </div>
+  <div class="toast-type">
+  食パンの種類
+  <span class="indispensable">必須</span>
+  <%= f.text_area :bread, placeholder:"食パンの種類(必須 40文字まで)", maxlength:"４0" %><br>
+  </div>
+  <div class="toast-num">
+  枚切り
+  <span class="indispensable">必須</span>
+  <%= f.collection_select(:breadtype_id, Breadtype.all, :id, :name, {}, {class:"select-box",id:"recipe-breadtype"}) %>
+  </div>
+  <div class="toast-material">
+  材料
+  <span class="indispensable">必須</span>
+  <%= f.text_area :material, placeholder:"材料" %><br>
+  </div>
+  <div class="toast-recipe">
+  アレンジレシピ
+  <span class="indispensable">必須</span>
+  <%= f.text_area :recipe, placeholder:"recipe(例"%><br>
+  </div>
+  <div class="toast-calorie">
+  カロリー
+  <%= f.text_area :calorie %> kcal<br>
+  </div>
+  <%= f.submit " 投稿♡" , class:"sell-btn" %>
+  <% end %>
+</div>
+

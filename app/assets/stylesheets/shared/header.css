@@ -1,0 +1,35 @@
+.login{
+  display: flex;
+  color: coral;
+  list-style: none;
+  justify-content: flex-end;
+  text-decoration: none;
+  cursor: grab;
+  border-bottom: dashed 2px #FFA07A;
+}
+
+.user_name{
+  color: coral;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.logout{
+  color: coral;
+  padding-right: 30px;
+  text-decoration: none;
+  cursor: grab;
+}
+
+.new_user{
+  color: coral;
+  text-decoration: none;
+  cursor: grab;
+  padding-right: 30px;
+}
+
+.log_in{
+  color: coral;
+  text-decoration: none;
+  margin-right: 50px;
+}

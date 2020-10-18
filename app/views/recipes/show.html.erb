@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+<div class="show-all">
+  <div class="show-all-name">
+  <%= @recipe.name %> ♡
+  </div>
+  <div class="show-all-image">
+  <%= image_tag @recipe.image, class:"show-image"%>
+  </div>
+  <div class="show-all-bread">
+  <%= @recipe.bread%>
+  </div>
+  <div class="show-all-breadtype">
+  <%= @recipe.breadtype.name%>
+  </div>
+  <div class="show-all-material">
+  <%= @recipe.material%>
+  </div>
+  <div class="show-all-recipe">
+  <%= @recipe.recipe%>
+  </div>
+  <div class="show-all-calorie">
+  <%= @recipe.calorie%>
+  </div>
+  <div class="show-all-username">
+  <%= @recipe.user.name %>
+  </div>
+  <%= link_to 'トップページへ戻る', root_path, class:"recipe-root"%>
+  <% if user_signed_in? && current_user.id == @recipe.user_id %>
+    <%= link_to '削除', recipe_path, method: :delete, class:"recipe-destroy" %>
+  <% end %>
+</div>

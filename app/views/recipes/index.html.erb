@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+<p class="arengi-recipe">〜  トースト♡アレンジレシピ  〜</p>
+<%= link_to image_tag("toast.png",class:"toast")%>
+<div class='irasuto-btn'>
+  <%= link_to new_recipe_path, class:"irasuto-link" do %>
+  <p class='toukou_btn'>投稿♡</p>
+  <%= image_tag"irasuto.png",class:"irasuto"%>
+  <% end %>
+</div>
+<p class= "recipe-tittle">みんなのトーストアレンジレシピ 🍀</p>
+<div class=recipe-all>
+  <% @recipes.each do |recipe| %>
+  <div class="recipe-find">
+    <%= image_tag recipe.image, class: "recipe-img"%>
+  <ul class="recipe-find-all">
+  <%= link_to recipe_path(recipe.id), class:"irasuto-link" do %>
+    <li class="recipe-find-name">
+      <%= recipe.name %>♡ 
+    </li>
+  <% end %>
+    <li class="recipe-find-bread">
+    <%= recipe.bread %>
+    </li>
+    <li class="recipe-find-user-name">
+    <%= recipe.user.name%>
+    </li>
+  </ul>
+  </div>
+  <% end %>
+</div>
+<%= render "shared/footer" %>
