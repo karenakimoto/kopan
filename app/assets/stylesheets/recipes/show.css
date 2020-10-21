@@ -16,3 +16,207 @@
   width: 200px;
   border-radius: 15px 15px 15px 15px;
 }
+
+
+caption{
+  color: darkred;
+  text-shadow: 2px 2px 2px lightcoral;
+  font-size: 20px;
+}
+
+.table_01{
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0px 15px;
+  font-size: 15px;
+}
+
+th{
+  padding: 10px;
+  background: darksalmon;
+  vertical-align: middle;
+  text-align: left;
+  width: 100px;
+  overflow: visible;
+  position: relative;
+  color: #fff;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+td{
+  padding: 10px;
+  background: seashell;
+  width: 360px;
+  padding-left: 20px;
+}
+
+th::after{
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: darksalmon;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.recipe-root{
+  background: palevioletred;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 800ms ease all;
+  font-size: 17px;
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+  padding: 7px;
+}
+
+.recipe-root:hover{
+    background: #fff;
+    color: palevioletred;
+}
+
+.recipe-root:before,sell-btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: palevioletred;
+  transition:400ms ease all;
+}
+
+.recipe-root:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.recipe-root:before,.sell-btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.recipe-destroy{
+  background: palevioletred;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 800ms ease all;
+  font-size: 17px;
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+  padding: 7px;
+}
+
+.recipe-destroy:hover{
+  background: #fff;
+  color: palevioletred;
+}
+
+.recipe-destroy:before,sell-btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: palevioletred;
+  transition:400ms ease all;
+}
+
+.recipe-destroy:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.container{
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  width: 70%;
+  margin: 40px auto;
+}
+
+.tittle-comment{
+  color: lightpink;
+  text-shadow: 2px 2px 2px cornsilk;
+  font-size: 17px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+form input[type="submit"] {
+  background-color: palevioletred;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  width: 75px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  font-size: 17px;
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+  padding: 7px;
+}
+
+form input[type="submit"]:hover{
+  background: #fff;
+  color: palevioletred;
+}
+
+form input[type="submit"]:before,sell-btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: palevioletred;
+  transition:400ms ease all;
+}
+
+form input[type="submit"]:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.comments-name{
+  padding: 5px;
+  margin-top: 15px;
+  background-color: lavenderblush;
+  width: 100px;
+  margin: 0px auto;
+  border-radius: 20px 20px;
+}
+
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
