@@ -20,6 +20,8 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @recipe.comments.includes(:user)
   end
 
   def destroy
