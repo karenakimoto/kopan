@@ -1,29 +1,70 @@
 <%= render "shared/header" %>
 
 <div class="show-all">
+
   <div class="show-all-name">
   <%= @recipe.name %> ♡
   </div>
   <div class="show-all-image">
   <%= image_tag @recipe.image, class:"show-image"%>
   </div>
-  <div class="show-all-bread">
-  <%= @recipe.bread%>
+
+<table class="table_01">
+<caption>menu</caption>
+<tr>
+  <th>食パンの種類</th>
+  <td class="show-all-bread"><%= @recipe.bread%></td>
   </div>
-  <div class="show-all-breadtype">
-  <%= @recipe.breadtype.name%>
+</tr>
+<tr>
+  <th>枚切り</th>
+  <td class="show-all-breadtype"><%= @recipe.breadtype.name%></td>
   </div>
-  <div class="show-all-material">
-  <%= @recipe.material%>
+</tr>
+<tr>
+  <th>材料</th>
+  <td class="show-all-material"><%= @recipe.material%></td>
   </div>
-  <div class="show-all-recipe">
-  <%= @recipe.recipe%>
+</tr>
+<tr>
+  <th>レシピ</th>
+  <td class="show-all-recipe"><%= @recipe.recipe%></td>
   </div>
-  <div class="show-all-calorie">
-  <%= @recipe.calorie%>
+</tr>
+<tr>
+  <th>カロリー</th>
+  <% if @recipe.calorie.present? %>
+  <td class="show-all-calorie"><%= @recipe.calorie%>kcal 🐷</td>
+  <%else%>
+  <td class="show-all-calorie"></td>
+  <% end %>
   </div>
-  <div class="show-all-username">
-  <%= @recipe.user.name %>
+</tr>
+
+<tr>
+  <th>投稿者</th>
+  <td class="show-all-username"><%= @recipe.user.name %></td>
+  </div>
+</tr>
+</table>
+<div class="container">
+  <div class="comments",id= 'comments'>
+      <p class="tittle-comment">＜コメント＞</p>
+      <% if @comments %>
+        <% @comments.reverse_each do |comment| %>
+          <div class="comments-name"><%= comment.user.name%>さん</div>
+          <p><%= comment.text %></p>
+        <% end %>
+      <% end %>
+  </div>
+    <% if current_user %>
+        <%= form_with model: @comment, url:recipe_comments_path(@recipe.id) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "送信♡" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
   </div>
   <%= link_to 'トップページへ戻る', root_path, class:"recipe-root"%>
   <% if user_signed_in? && current_user.id == @recipe.user_id %>
