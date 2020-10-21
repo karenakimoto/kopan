@@ -7,10 +7,10 @@ KOPAN(コパン)
 トーストを美味しく食べるためのアレンジしたレシピを投稿できるアプリ
 
 # URL
-
+https://kopan-29717.herokuapp.com/
 
 # テスト用アカウント
-
+メールアドレス : test@gmail.com パスワード : test1234
 
 
 # 利用方法
@@ -37,10 +37,11 @@ KOPAN(コパン)
 
 # 実装予定の機能
 
-コメント機能
+コメント機能を非同期で表示させたい
 
 # データベース設計
-https://gyazo.com/3eb2207c376f21d5af1bb61be26c7703
+
+https://gyazo.com/3acca139745977acc8e4d2ac4161f963
 
 # ローカルでの動作方法
 
@@ -111,3 +112,16 @@ Things you may want to cover:
 - belongs_to :user
 - has_one_attached :image
 - belongs_to_active_hash :breadtype
+
+## commentsテーブル
+
+| Column | Type ----| Options                      |
+|--------|----------|------------------------------|
+|text----|text------|null: false                   |
+|user----|references|null: false, foreign_key: true|
+|item----|references|null: false, foreign_key: true|
+
+### アソシエーション
+
+- belongs_to :user
+- belongs_to :recipe
