@@ -3,6 +3,7 @@ class Recipe < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   belongs_to_active_hash :breadtype
+  has_many :comments, foreign_key: "recipe_id", dependent: :destroy
 
   with_options presence: true do
     validates :image
