@@ -1,0 +1,15 @@
+footer{
+  margin-top: 30px;
+  width: 100vw;
+  height: 40px;
+  background-color: bisque;
+  text-align: center;
+}
+
+.footer-text{
+  font-size: 15px;
+}
+
+.footer-mark{
+  color: pink;
+}
