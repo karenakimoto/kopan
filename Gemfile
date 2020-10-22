@@ -63,3 +63,5 @@ gem 'active_hash'
 gem 'rails-i18n'
 
 gem 'jquery-rails'
+
+gem 'bootstrap', '~> 4.1.1'
