@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = Comment.create(comment_params)
-    redirect_to recipe_path(recipe.id)
+    comment = Comment.create(comment_params)
+    redirect_to "/recipes/#{comment.recipe.id}" 
   end
 
   private

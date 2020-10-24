@@ -58,7 +58,7 @@
       <% end %>
   </div>
     <% if current_user %>
-      <%= form_with model: @comment, url:recipe_comments_path(@recipe.id), method: :post do |form| %>
+      <%= form_with model: @comment, url:recipe_comments_path(@recipe.id), method: :post, local:true do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
         <%= form.submit "送信♡" %>
       <% end %>
