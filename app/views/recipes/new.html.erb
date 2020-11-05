@@ -3,9 +3,9 @@
 <%= render 'shared/error', model: f.object %>
 <div class=toast-post>
   <div class=post-img>
-    投稿画像
-    <span class="indispensable">必須</span>
-    <%= f.file_field :image, id:"recipe-image" %>
+  投稿画像
+  <span class="indispensable">必須</span>
+  <%= f.file_field :image, id:"recipe-image" %>
   </div>
   <div class="toast-name">
   トースト名
@@ -15,7 +15,7 @@
   <div class="toast-type">
   食パンの種類
   <span class="indispensable">必須</span>
-  <%= f.text_area :bread, placeholder:"食パンの種類(必須 40文字まで)", maxlength:"４0" %>
+  <%= f.text_area :bread, placeholder:"食パンの種類(必須 40文字まで)", maxlength:"40" %>
   </div>
   <div class="toast-num">
   枚切り
